@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
+
+body {
+    background-color: #AEB6BF;
+    font-family: 'Roboto Flex', sans-serif;
+    color: #1B2631;
+    display: block;
+    font-size: 22px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+header {
+    text-align: center;
+    color: white;
+}
+
+header h1 {
+    font-size: 54px;
+    padding: 50px 0 0 0;
+}
+
+.exercicios div {
+    background-color: #F4F6F6;
+    padding: 20px 80px;
+    margin: 10px;
+}
+
+button {
+    font-size: 15px;
+    padding: 10px 14px;
+    border: none;
+    background: #F8C471;
+    cursor: pointer;
+}
+
+input {
+    font-size: 15px;
+    padding: 10px 14px;
+    border: none;
+    background-color: #EBEDEF;
+}
+
+#formulario {
+    display: inline;
+    padding: 5px;
+}
+
+footer {
+    text-align: center;
+    font-size: 15px;
+}
