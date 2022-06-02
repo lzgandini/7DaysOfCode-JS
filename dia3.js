@@ -1,4 +1,5 @@
-const trilha = ['Um'];
+
+let todasAsTecnologias = [];
 
 /*primeira camada da árvore: escolher entre front-end e back-end */
 function frontEnd() {
@@ -19,6 +20,8 @@ function frontEnd() {
     botaoReact.style.display = 'inline';
     let botaoVue = document.getElementById("vue");
     botaoVue.style.display = 'inline';
+
+    todasAsTecnologias.push("Trilha de Front-End ");
 }
 
 function backEnd() {
@@ -39,6 +42,8 @@ function backEnd() {
     botaoC.style.display = 'inline';
     let botaoJava = document.getElementById("java");
     botaoJava.style.display = 'inline';
+
+    todasAsTecnologias.push("Trilha de Back-End ");
 }
 
 /*segunda camada da árvore: escolher subareas dentro de front-end e back-end */
@@ -52,6 +57,8 @@ function escolheReact() {
     botaoVue.style.display = 'none';    */
     let botaoVue = document.getElementById("vue");
     botaoVue.disabled = true;
+
+    todasAsTecnologias.push(" com framework React");
     
     escolheEstrategia();
 }
@@ -64,6 +71,8 @@ function escolheVue() {
     /*para desabilitar a opção react*/
     let botaoReact = document.getElementById("react")
     botaoReact.disabled = true;
+
+    todasAsTecnologias.push(" com framework Vue");
 
     escolheEstrategia();
 }
@@ -78,6 +87,8 @@ function escolheC() {
     botaoJava.style.display = 'none';    */
     let botaoJava = document.getElementById("java");
     botaoJava.disabled = true;
+
+    todasAsTecnologias.push(" com desenvolvimento C#");
     
     escolheEstrategia();
 }
@@ -90,6 +101,8 @@ function escolheJava() {
     /*para desabilitar a opção c#*/
     let botaoC = document.getElementById("c#")
     botaoC.disabled = true;
+
+    todasAsTecnologias.push(" com desenvolvimento em Java");
 
     escolheEstrategia();
 }
@@ -116,7 +129,9 @@ function escolheEspecializacao() {
     let botaoFullstack = document.getElementById("fullstack")
     botaoFullstack.disabled = true;
 
-    escolheOutrasTecnologias();
+    todasAsTecnologias.push(" e caminho de Especialização. ");
+
+    imprimirTrilha();
 }
 
 function escolheFullstack() {
@@ -128,67 +143,11 @@ function escolheFullstack() {
     let botaoEspecializacao = document.getElementById("especializacao")
     botaoEspecializacao.disabled = true;
 
-    escolheOutrasTecnologias();
+    todasAsTecnologias.push(" e formação FullStack. ");
+
+    imprimirTrilha();
 }
 
-/*quarta camada da árvore: informar outras tecnologias que deseja aprender */
-function escolheOutrasTecnologias() {
-    /*para perguntar ao usuário quais tecnologias usa*/
-    let tecnologias = document.getElementById("tecnologias");
-    tecnologias.style.display = 'block';
-
-    cadastrarTecnologia();
-}
-
-function cadastrarTecnologia() {
-    /*para cadastrar nova tecnologia*/
-    let formulario = document.getElementById("formulario");
-    formulario.style.display = 'flex';
-
-    let botaoCadastrar = document.getElementById("submeter");
-    botaoCadastrar.style.backgroundColor = 'orange';    
-
-    /*ADICIONAR ARRAY PARA ARMAZENAMENTO DOS CADASTROS */
-    document.getElementById("respostas").innerHTML = trilha;
-
-    questionarOutraTecnologia();
-}
-
-/*quinta camada da árvore: escolher se quer continuar cadastrando linguagens ou não */
-function questionarOutraTecnologia() {
-    /*para perguntar se o usuário deseja cadastrar outra tecnologia*/
-    let outraTecnologia = document.getElementById("outraTecnologia");
-    outraTecnologia.style.display = 'block';
-
-    /*mostrar o botão sim*/
-    let botaoSim = document.getElementById("sim");
-    botaoSim.style.display = 'inline';
-
-    /*mostrar o botão não*/
-    let botaoNao = document.getElementById("nao");
-    botaoNao.style.display = 'inline';
-}
-
-function escolheSim() {
-    /*para mudar a cor do background para laranja em sim*/
-    let botaoSim = document.getElementById("sim");
-    botaoSim.style.backgroundColor = 'orange';
-
-    /*para desabilitar a opção nao*/
-    let botaoNao = document.getElementById("nao")
-    botaoNao.disabled = true;
-
-
-    /*ENTENDER POR QUE NÃO CHAMA A FUNÇÃO */
-    cadastrarTecnologia();
-}
-
-function escolheNao() {
-    /*para mudar a cor do background para laranja em nao*/
-    let botaoNao = document.getElementById("nao");
-    botaoNao.style.backgroundColor = 'orange';
-
-    /*para desabilitar a opção sim*/
-    let botaoSim = document.getElementById("sim")
-    botaoSim.disabled = true;
+function imprimirTrilha() {
+    alert(todasAsTecnologias);
 }
