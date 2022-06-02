@@ -17,27 +17,11 @@
     <container class="container">
         <div class="exercicios">
             <div class="dia2">
-                <h4>Dia 2</h4>
+                <h4>Dia 2: mensagem personalizada</h4>
                 <button onclick="conheceUsuario()">Exercício</button>
                 <p id="resposta2"></p>
     
-                <script>
-                    function conheceUsuario() {
-        
-                        let nome = prompt("Qual é o seu nome? ");
-                        let idade = prompt("Quantos anos você tem? ");
-                        let linguagem = prompt("Qual linguagem de programação você está estudando? ");
-                        let resposta = `Olá ${nome}, você tem ${idade} anos e já está aprendendo ${linguagem}!\n\n`;
-    
-                        let gostaDeEstudar = prompt(resposta + `Você gosta de estudar ${linguagem}?\nResponda com o número 1 para SIM ou 2 para NÃO.`);
-                    
-                        if (gostaDeEstudar == 1) {
-                            alert("Muito bom! Continue estudando e você terá muito sucesso.")
-                        } else {
-                            alert("Ahh que pena...")
-                        }
-                    }
-                </script>
+                <script src="dia2.js"></script>
             </div>
 
             <div class="dia3">
@@ -60,21 +44,6 @@
                     um dev fullstack?</p>
                 <button id="especializacao" style="display:none" onclick="escolheEspecializacao()">Especialização</button>
                 <button id="fullstack" style="display:none" onclick="escolheFullstack()">Fullstack</button>
-                
-                <!--quarta camada da árvore: informar outras tecnologias que deseja aprender-->
-                <p id="tecnologias" style="display:none">Quais outras tecnologias você deseja aprender?</p>
-
-                <div id="formulario" style="display:none">
-                    <input type="text" id="tecnologia" placeholder="Tecnologia"/><br>
-                    <button type="submit" id="submeter" onclick="cadastrarTecnologia()">Cadastrar</button>
-                </div>
-                
-                <!--quinta camada da árvore: escolher se quer continuar cadastrando linguagens ou não-->
-                <p id="outraTecnologia" style="display:none">Tem mais alguma?</p>
-                <button id="sim" style="display:none" onclick="escolheSim()" value="sim">Sim</button>
-                <button id="nao" style="display:none" onclick="escolheNao()" value="nao">Não</button>
-                <p id="roteiro" style="display:none">Nossa, esse é um grande caminho! Mas você fez ótimas escolhas 
-                    e se esforçando vai conseguir. Este roteiro que eu preparei vai te ajudar.</p>
 
                 <!--sexta camada da árvore: exibir todas as respostas informadas em uma lista-->
                 <div id="respostas" style="display:none">
