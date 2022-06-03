@@ -1,3 +1,5 @@
+/*oi*/
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
 
 body {
@@ -5,11 +7,11 @@ body {
     font-family: 'Roboto Flex', sans-serif;
     color: #1B2631;
     display: block;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 h4 {
-    font-size: 24px;
+    font-size: 22px;
 }
 
 header {
@@ -18,7 +20,7 @@ header {
 }
 
 header h1 {
-    font-size: 54px;
+    font-size: 46px;
     padding: 50px 0 0 0;
 }
 
@@ -29,7 +31,7 @@ header h1 {
 }
 
 button {
-    font-size: 15px;
+    font-size: 14px;
     padding: 10px 14px;
     border: none;
     background: #F8C471;
@@ -37,7 +39,7 @@ button {
 }
 
 input {
-    font-size: 15px;
+    font-size: 14px;
     padding: 10px 14px;
     border: none;
     background-color: #EBEDEF;
@@ -50,5 +52,5 @@ input {
 
 footer {
     text-align: center;
-    font-size: 15px;
+    font-size: 12px;
 }
